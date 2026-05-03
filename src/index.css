@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-accent: "Syne", sans-serif;
+
+  --color-brand-black: #000000;
+  --color-brand-white: #FFFFFF;
+  --color-brand-accent: #CCFF00;
+  --color-brand-red: #d63c2f;
+  --color-brand-charcoal: #0a0a0a;
+  --color-brand-mid: #141414;
+
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-spin-slow-reverse: spin 14s linear infinite reverse;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-brand-white font-sans overflow-x-hidden antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-accent font-black uppercase italic tracking-tighter;
+  }
+}
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1.5px currentColor;
+    color: transparent;
+  }
+
+  .border-brutal {
+    border-width: 16px;
+    border-color: #CCFF00;
+  }
+
+  .border-accent {
+    border-color: #CCFF00;
+  }
+
+  .bg-accent {
+    background-color: #CCFF00;
+  }
+
+  .text-accent {
+    color: #CCFF00;
+  }
+}
+
